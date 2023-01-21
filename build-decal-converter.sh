@@ -7,25 +7,25 @@
 # Create a temp folder to use for downloading files and building  decal-converter.deb file
 tmp_dir=$(mktemp -d)
 
-# Create a directory in tmp_dir named "decal-converter"
+# Create a temp folder "decal-converter"
 mkdir "${tmp_dir}/decal-converter"
 
-# Create a directory in tmp_dir/decal-converter named "DEBIAN"
+# Create a folder in tmp_dir/decal-converter named "DEBIAN"
 mkdir "${tmp_dir}/decal-converter/DEBIAN"
 
-# Create a directory in tmp_dir/decal-converter named "usr"
+# Create a folder in tmp_dir/decal-converter named "usr"
 mkdir "${tmp_dir}/decal-converter/usr"
 
-# Create a directory in tmp_dir/decal-converter/usr named "share"
+# Create a folder in tmp_dir/decal-converter/usr named "share"
 mkdir "${tmp_dir}/decal-converter/usr/share"
 
-# Create a directory in tmp_dir/decal-converter/usr/share named "applications"
+# Create a folder in tmp_dir/decal-converter/usr/share named "applications"
 mkdir "${tmp_dir}/decal-converter/usr/share/applications"
 
-# Create a directory in tmp_dir/decal-converter/usr/share named "decal-converter"
+# Create a folder in tmp_dir/decal-converter/usr/share named "decal-converter"
 mkdir "${tmp_dir}/decal-converter/usr/share/decal-converter"
 
-# Create a directory in tmp_dir/decal-converter/usr/share/decal-converter named "examples" (This will have some example decals)
+# Create a folder in tmp_dir/decal-converter/usr/share/decal-converter named "examples" (This will have some example decals)
 mkdir "${tmp_dir}/decal-converter/usr/share/decal-converter/examples"
 
 # Now the main structure is Built
