@@ -106,4 +106,5 @@ if [[ -f "$HOME/Desktop/decal-converter.deb" ]]; then
   rm -rf "$HOME/Desktop/Decal-Converter-main"
 fi
 
-$SHELL
+cd "$HOME"
+exit
