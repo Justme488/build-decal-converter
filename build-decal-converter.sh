@@ -102,7 +102,8 @@ sleep 2
 
 # copy the .deb file to desktop
 mv "${tmp_dir}/decal-converter.deb" "${HOME}/Desktop/decal-converter.deb"
-sleep 4
+
+cd ${HOME}
 # If the .deb file exists, delete the build directory
 if [ -f "${HOME}/Desktop/decal-converter.deb" ]; then
   zenity --info --title="Install File Is On Your Desktop" --text="decal-converter.deb is on your desktop\n\n( ${HOME}/Desktop/decal-converter.deb )" --width="400" --height="100"
@@ -111,6 +112,5 @@ if [ -f "${HOME}/Desktop/decal-converter.deb" ]; then
   rm -rf "${tmp_dir}"
 fi
 
-cd "$HOME"
 rm "${HOME}/Desktop/build-decal-converter.sh"
 exit
