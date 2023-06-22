@@ -73,7 +73,7 @@ wget "https://github.com/Justme488/Decal-Converter/archive/refs/heads/main.zip"
 unzip "${tmp_dir}/main.zip"
 
 # If Decal-Converter-main exists in tmp_dir, that means main.zip was extracted and can be removed
-if [[ -d "${tmp_dir}/Decal-Converter-main" ]]; then
+if -d "${tmp_dir}/Decal-Converter-main"; then
   # Remove desktop/main,zip
   rm "${tmp_dir}/main.zip"
 fi
