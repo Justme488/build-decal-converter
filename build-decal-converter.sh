@@ -110,6 +110,8 @@ if [[ -f "${HOME}/Desktop/decal-converter.deb" > /dev/null 2>&1 ]]; then
   rm -rf "${tmp_dir}/Decal-Converter-main"
   rm -rf "${tmp_dir}"
 fi
+
 zenity --info --title="Install File Is On Your Desktop" --text="decal-converter.deb is on your desktop\n\n( ${HOME}/Desktop/decal-converter.deb )" --width="400" --height="100"
+
 rm "${HOME}/Desktop/build-decal-converter.sh"
 exit
