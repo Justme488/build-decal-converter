@@ -106,6 +106,7 @@ mv "${tmp_dir}/decal-converter.deb" "${HOME}/Desktop/decal-converter.deb"
 # If the .deb file exists, delete the build directory
 if [[ -f "$HOME/Desktop/decal-converter.deb" ]]; then
   zenity --info --title="Install File Is On Your Desktop" --text="decal-converter.deb is on your desktop\n\n( ${HOME}/Desktop/decal-converter.deb )" --width="400" --height="100"
+  sleep 2
   rm -rf "${tmp_dir}/decal-converter"
   rm -rf "${tmp_dir}/Decal-Converter-main"
   rm -rf "$tmp_dir"
