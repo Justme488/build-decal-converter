@@ -73,7 +73,7 @@ wget "https://github.com/Justme488/Decal-Converter/archive/refs/heads/main.zip"
 unzip "${tmp_dir}/main.zip"
 
 # If Decal-Converter-main exists in tmp_dir, that means main.zip was extracted and can be removed
-if -d "${tmp_dir}/Decal-Converter-main"; then
+if [[ -d "${tmp_dir}/Decal-Converter-main" ]] > /dev/null 2>&1; then
   # Remove desktop/main,zip
   rm "${tmp_dir}/main.zip"
 fi
@@ -105,7 +105,7 @@ mv "${tmp_dir}/decal-converter.deb" "${HOME}/Desktop/decal-converter.deb"
 
 cd ${HOME}
 # If the .deb file exists, delete the build directory
-if [ -f "${HOME}/Desktop/decal-converter.deb" ]; then
+if [[ -f "${HOME}/Desktop/decal-converter.deb" ]] > /dev/null 2>&1; then
   zenity --info --title="Install File Is On Your Desktop" --text="decal-converter.deb is on your desktop\n\n( ${HOME}/Desktop/decal-converter.deb )" --width="400" --height="100"
   rm -rf "${tmp_dir}/decal-converter"
   rm -rf "${tmp_dir}/Decal-Converter-main"
