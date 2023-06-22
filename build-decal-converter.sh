@@ -110,8 +110,8 @@ if [[ -f "${HOME}/Desktop/decal-converter.deb" ]]; then
   rm -rf "${tmp_dir}/decal-converter"
   rm -rf "${tmp_dir}/Decal-Converter-main"
   rm -rf "${tmp_dir}"
-  rm -f "${HOME}/Desktop/build-decal-converter.sh"
 fi
 
-#cd "$HOME"
+cd "$HOME"
+rm -f "${HOME}/Desktop/build-decal-converter.sh"
 exit
