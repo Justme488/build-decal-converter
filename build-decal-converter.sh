@@ -112,5 +112,5 @@ if [[ -f "$HOME/Desktop/decal-converter.deb" ]]; then
   rm -rf "$HOME/Desktop/build-decal-converter.sh"
 fi
 
-cd "$HOME"
+#cd "$HOME"
 exit
