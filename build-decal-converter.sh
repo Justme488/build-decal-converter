@@ -103,9 +103,9 @@ sleep 2
 # copy the .deb file to desktop
 mv "${tmp_dir}/decal-converter.deb" "${HOME}/Desktop/decal-converter.deb"
 sleep 2
-cd ${HOME}
+cd ${HOME/Desktop}
 # If the .deb file exists, delete the build directory
-if [[ -f "/Desktop/decal-converter.deb" ]]; then
+if [[ -f "decal-converter.deb" ]]; then
   rm -rf "${tmp_dir}/decal-converter"
   rm -rf "${tmp_dir}/Decal-Converter-main"
   rm -rf "${tmp_dir}"
