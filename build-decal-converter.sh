@@ -105,7 +105,7 @@ mv "${tmp_dir}/decal-converter.deb" "${HOME}/Desktop/decal-converter.deb"
 
 cd ${HOME}
 # If the .deb file exists, delete the build directory
-if [[ -f "${HOME}/Desktop/decal-converter.deb" > /dev/null 2>&1 ]]; then
+if [[ -f "${HOME}/Desktop/decal-converter.deb" ]]; then
   rm -rf "${tmp_dir}/decal-converter"
   rm -rf "${tmp_dir}/Decal-Converter-main"
   rm -rf "${tmp_dir}"
