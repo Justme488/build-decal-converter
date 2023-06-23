@@ -122,7 +122,8 @@ sleep 2
 
 # Delete the build directory & build-decal-converter.sh
 echo "Delete the build directory & build-decal-converter.sh"
-rm -rf ${tmp_dir}
-rm ${HOME}/Desktop/build-decal-converter.sh
+rm -rf "${tmp_dir}"
+cd "${HOME}/Desktop"
+rm -f "${HOME}/Desktop/build-decal-converter.sh"
 zenity --info --title="Install File Is On Your Desktop" --text="decal-converter.deb is on your desktop\n\n( ${HOME}/Desktop/decal-converter.deb )" --width="400" --height="100"
 exit
