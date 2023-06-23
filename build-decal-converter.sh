@@ -121,10 +121,10 @@ echo "Moving decal-converter.deb package to desktop"
 mv "${tmp_dir}/decal-converter.deb" "${HOME}/Desktop/decal-converter.deb"
 sleep 2
 # Change directory to user desktop
-cd "{HOME}/Desktop"
+cd "${HOME}/Desktop"
 # If the .deb file exists, delete the build directory
 echo "Checking if decal-converter.deb package exists, and deleting temp folder & build-decal-converter.sh if it does"
-if [[ -e "{HOME}/Desktop/decal-converter.deb" ]]; then
+if [[ -e "${HOME}/Desktop/decal-converter.deb" ]]; then
   rm -rf "${tmp_dir}"
   rm "${HOME}/Desktop/build-decal-converter.sh"
 fi
