@@ -122,7 +122,7 @@ sleep 1
 
 # If decal-converter.deb exists, delete the build directory & build-decal-converter.sh
 echo "Does decal-converter.deb exist on your desktop?"
-if [[ -e "{HOME}/Desktop/decal-converter.deb" ]]; then
+if [[ -f "{HOME}/Desktop/decal-converter.deb" ]]; then
   echo "It does exist. We will delete the build directory & build-decal-converter.sh"
   rm -rf "${tmp_dir}"
   cd "${HOME}"/Desktop
