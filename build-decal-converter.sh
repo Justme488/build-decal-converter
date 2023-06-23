@@ -46,7 +46,7 @@ echo "Maintainer: justme488 <justme488@gmail.com>" >> "${tmp_dir}/decal-converte
 echo "Priority: optional" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo "Depends: imagemagick,pngquant,zenity" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo "Description: Decal-Converter" >> "${tmp_dir}/decal-converter/DEBIAN/control"
-echo " A utility to convert decal images to png, gif, fill with black, colorize, watermark, and compress for Raven's Decals. Feautures Include:" >> "${tmp_dir}/decal-converter/DEBIAN/control"
+echo " A utility to convert decal images to png, gif, fill with black, colorize, watermark, and compress for Raven's Decals" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo " * Single or batch convert image to png" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo " * Single or batch convert image to gif" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo " * Single or batch colorize, fill with black, compress, and watermark decals images to White, Black, Blue, Teal, Red, green, silver, and pink" >> "${tmp_dir}/decal-converter/DEBIAN/control"
@@ -125,7 +125,7 @@ echo "Checking if decal-converter.deb package exists, and deleting temp folder &
 if [[ -f "${HOME}/Desktop/decal-converter.deb" ]]; then
   rm -rf "${tmp_dir}"
   cd "${HOME}/Desktop"
-  rm -f "build-decal-converter.sh"
+  rm -f "build-decal-converter.*"
 fi
 
 zenity --info --title="Install File Is On Your Desktop" --text="decal-converter.deb is on your desktop\n\n( ${HOME}/Desktop/decal-converter.deb )" --width="400" --height="100"
