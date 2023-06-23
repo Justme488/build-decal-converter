@@ -116,10 +116,12 @@ dpkg-deb --build "${tmp_dir}/decal-converter"
 # Wait 2 seconds for .deb file to build before checking if it exists
 sleep 2
 
-# copy the .deb file to desktop
+# Copy the .deb file to desktop
 echo "Moving decal-converter.deb package to desktop"
 mv "${tmp_dir}/decal-converter.deb" "${HOME}/Desktop/decal-converter.deb"
 sleep 2
+# Change directory to user desktop
+cd "{HOME}/Desktop"
 # If the .deb file exists, delete the build directory
 echo "Checking if decal-converter.deb package exists, and deleting temp folder & build-decal-converter.sh if it does"
 if [[ -e "{HOME}/Desktop/decal-converter.deb" ]]; then
