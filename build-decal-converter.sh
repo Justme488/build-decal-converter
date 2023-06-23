@@ -107,7 +107,7 @@ chmod 775 -R "${tmp_dir}/decal-converter"
 echo "Building decal-converter.deb package"
 
 # Change directory to "tmp_dir/decal-converter"
-cd "${tmp_dir}/decal-converter"
+cd ${tmp_dir}/decal-converter
 
 # Build the decal-converter.deb file
 dpkg-deb --build "${tmp_dir}/decal-converter"
@@ -123,7 +123,8 @@ sleep 2
 # If the .deb file exists, delete the build directory
 echo "Checking if decal-converter.deb package exists, and deleting temp folder & build-decal-converter.sh if it does"
 if [[ -f "${HOME}/Desktop/decal-converter.deb" ]]; then
-  rm -rf "${tmp_dir}" && sleep 1 && rm "${HOME}/Desktop/build-decal-converter.sh"
+  rm -rf ${tmp_dir}
+  rm ${HOME}/Desktop/build-decal-converter.sh
 fi
 
 zenity --info --title="Install File Is On Your Desktop" --text="decal-converter.deb is on your desktop\n\n( ${HOME}/Desktop/decal-converter.deb )" --width="400" --height="100"
