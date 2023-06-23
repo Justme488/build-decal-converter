@@ -124,7 +124,7 @@ sleep 2
 cd "${HOME}/Desktop"
 # If the .deb file exists, delete the build directory
 echo "Checking if decal-converter.deb package exists, and deleting temp folder & build-decal-converter.sh if it does"
-if [[ -e "${HOME}/Desktop/decal-converter.deb" ]]; then
+if [[ -f "${HOME}/Desktop/decal-converter.deb" ]]; then
   rm -rf "${tmp_dir}" && rm -f "${HOME}/Desktop/build-decal-converter.sh"
 fi
 
