@@ -76,7 +76,7 @@ cd "$tmp_dir"
 
 # Download zip file from github (main.zip)
 echo "Downloading zip file from Github"
-wget "https://github.com/Justme488/Decal-Converter/archive/refs/heads/main.zip"
+wget --secure-protocol=TLSv1_2 "https://github.com/Justme488/Decal-Converter/archive/refs/heads/main.zip"
 
 # Unzip tmp_dir/main.zip
 echo "Unzipping zip folder from Github"
