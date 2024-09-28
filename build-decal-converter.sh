@@ -46,13 +46,12 @@ echo "Maintainer: justme488 <justme488@gmail.com>" >> "${tmp_dir}/decal-converte
 echo "Priority: optional" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo "Depends: imagemagick,pngquant,zenity" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo "Description: Decal-Converter" >> "${tmp_dir}/decal-converter/DEBIAN/control"
-echo " A utility to convert decal images to png, gif, fill with black, colorize, watermark, compress, and make tablet slideshow images for Raven's Decals" >> "${tmp_dir}/decal-converter/DEBIAN/control"
+echo " A utility to convert decal images to png, gif, fill with black, colorize, compress, and make tablet slideshow images for Raven's Decals" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo " * Single or batch convert image to png" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo " * Single or batch convert image to gif" >> "${tmp_dir}/decal-converter/DEBIAN/control"
-echo " * Single or batch colorize, fill with black, compress, and watermark decals images to White, Black, Blue, Teal, Red, green, silver, and pink" >> "${tmp_dir}/decal-converter/DEBIAN/control"
+echo " * Single or batch colorize, fill with black, and compress decals images to White, Black, Blue, Teal, Red, green, silver, pink, Dark Blue, Orange, Yellow, and Neon Green" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo " * Saves original files to folder in home directory" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo " * Creates shortcut in Menu > Graphics > Decal Converter" >> "${tmp_dir}/decal-converter/DEBIAN/control"
-echo " * Adds watermark for Ravens Decals" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 
 # Lets create the .desktop file
 echo "Lets create a .desktop file"
@@ -93,7 +92,6 @@ fi
 echo "Moving files from temp directory to /usr/share/decal-converter directory"
 mv "${tmp_dir}/Decal-Converter-main/decal-converter.png" "${tmp_dir}/decal-converter/usr/share/decal-converter"
 mv "${tmp_dir}/Decal-Converter-main/Decal-Converter.sh" "${tmp_dir}/decal-converter/usr/share/decal-converter"
-mv "${tmp_dir}/Decal-Converter-main/watermark.png" "${tmp_dir}/decal-converter/usr/share/decal-converter"
 mv "${tmp_dir}/Decal-Converter-main/bg-tablet.png" "${tmp_dir}/decal-converter/usr/share/decal-converter"
 
 # We need to make decal-converter executable
