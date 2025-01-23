@@ -93,7 +93,7 @@ echo "Moving files from temp directory to /usr/share/decal-converter directory"
 mv "${tmp_dir}/Decal-Converter-main/decal-converter.png" "${tmp_dir}/decal-converter/usr/share/decal-converter"
 mv "${tmp_dir}/Decal-Converter-main/Decal-Converter.sh" "${tmp_dir}/decal-converter/usr/share/decal-converter"
 mv "${tmp_dir}/Decal-Converter-main/bg-tablet.png" "${tmp_dir}/decal-converter/usr/share/decal-converter"
-mv "${tmp_dir}/Decal-converter-main/help.txt" "${tmp_dir}/decal-converter/usr/share/decal-converter"
+mv "${tmp_dir}/Decal-Converter-main/help.txt" "${tmp_dir}/decal-converter/usr/share/decal-converter"
 
 # We need to make decal-converter executable
 echo "Making decal-converter.sh executable"
