@@ -32,21 +32,21 @@ echo "Creating a folder in tmp_dir/decal-converter/usr/share named 'decal-conver
 mkdir "${tmp_dir}/decal-converter/usr/share/decal-converter"
 
 
-# Now the main structure is Built
+# Now the main structure is built
 echo "Now the main structure is built"
 
 # Lets create a debian control file
 echo "Lets create a debian Control file"
 touch "${tmp_dir}/decal-converter/DEBIAN/control"
 echo "Package: decal-converter" >>  "${tmp_dir}/decal-converter/DEBIAN/control"
-echo "Version: 6.0" >> "${tmp_dir}/decal-converter/DEBIAN/control"
+echo "Version: 7.0" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo "Architecture: amd64" >> "${tmp_dir}/decal-converter/DEBIAN/control"
-echo "Installed-Size: 302" >> "${tmp_dir}/decal-converter/DEBIAN/control"
+echo "Installed-Size: 236" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo "Maintainer: justme488 <justme488@gmail.com>" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo "Priority: optional" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo "Depends: imagemagick,pngquant,zenity,potrace" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo "Description: Decal-Converter" >> "${tmp_dir}/decal-converter/DEBIAN/control"
-echo " A utility to convert decal images to transparent background, mirror, gif, fill with black, White background, colorize, compress, and make tablet slideshow images for Raven's Decals" >> "${tmp_dir}/decal-converter/DEBIAN/control"
+echo " A utility to convert decal images with the background removed (with remove.bg) to transparent background, mirror, gif, fill with black, White background, colorize, compress, and make tablet slideshow images for Raven's Decals" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo " * Single or batch background removal" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo " * Single or batch convert image to gif" >> "${tmp_dir}/decal-converter/DEBIAN/control"
 echo " * Single or batch colorize, fill with black, and compress decals images to White, Black, Blue, Teal, Red, Purple, green, silver, pink, Dark Blue, Orange, Yellow, and Neon Green" >> "${tmp_dir}/decal-converter/DEBIAN/control"
@@ -91,13 +91,13 @@ fi
 # Move files from "tmp_dir/Decal-Converter-main" to "tmp_dir/decal-converter/usr/share/decal-converter"
 echo "Moving files from temp directory to /usr/share/decal-converter directory"
 mv "${tmp_dir}/Decal-Converter-main/decal-converter.png" "${tmp_dir}/decal-converter/usr/share/decal-converter"
-mv "${tmp_dir}/Decal-Converter-main/Decal-Converter.sh" "${tmp_dir}/decal-converter/usr/share/decal-converter"
+mv "${tmp_dir}/Decal-Converter-main/decal-converter.sh" "${tmp_dir}/decal-converter/usr/share/decal-converter"
 mv "${tmp_dir}/Decal-Converter-main/bg-tablet.png" "${tmp_dir}/decal-converter/usr/share/decal-converter"
 mv "${tmp_dir}/Decal-Converter-main/help.txt" "${tmp_dir}/decal-converter/usr/share/decal-converter"
 
 # We need to make decal-converter executable
 echo "Making decal-converter.sh executable"
-chmod +x "${tmp_dir}/decal-converter/usr/share/decal-converter/Decal-Converter.sh"
+chmod +x "${tmp_dir}/decal-converter/usr/share/decal-converter/decal-converter.sh"
 
 # We need to change permissions on the folder, and all of it's contents
 echo "Changing permissions for decal-converter folder, and contents"
